@@ -8,15 +8,9 @@ def _ensure_dir(path: str):
 def plot_timeseries(log: Dict[str, List[float]], out_path: str):
     ''' Plot the time series of temperatures and thresholds. 
         log: A dictionary containing time series data with keys:
-            - "t": time points
-            - "T_true": true temperature
-            - "T_meas": measured/filtered temperature
-            - "T_out": outdoor temperature
-            - "lower": lower threshold (optional value)
-            - "upper": upper threshold (optional value)
-            - "setpoint": setpoint temperature
         out_path: Path to save the output plot image.
     '''
+    
     _ensure_dir(out_path)
     t = log["t"]
     T_true = log["T_true"]
